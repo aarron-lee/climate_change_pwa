@@ -42,6 +42,12 @@ module.exports = {
     ]
   },
   resolve: {
+    alias: {
+      Components: path.resolve(__dirname, 'app', 'Components'),
+      ContainerComponents: path.resolve(__dirname, 'app', 'Components', 'Container'),
+      PresentationalComponents: path.resolve(__dirname, 'app', 'Components', 'Presentation'),
+      Stylesheets: path.resolve(__dirname, 'app', 'Styles')
+    },
     extensions: ['.js', '.jsx', '.scss']
   },
   plugins: [

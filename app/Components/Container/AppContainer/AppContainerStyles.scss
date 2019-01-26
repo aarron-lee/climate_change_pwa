@@ -1,3 +1,6 @@
+@import '~Stylesheets/core.scss';
+
 .appContainer {
-  font-size: 12px;
+  font-size: $font-size-largest;
+  font-weight: $fw-light;
 }

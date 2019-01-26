@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import AppContainer from './Components/Container/AppContainer/AppContainer';
+import AppContainer from 'ContainerComponents/AppContainer/AppContainer';
 
 document.addEventListener('DOMContentLoaded', function() {
   const root = document.getElementById('root');
