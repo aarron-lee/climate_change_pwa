@@ -1,2 +1,3 @@
 # climate_change_pwa
-PWA with guide to fight climate change
+
+A basic PWA learning project I'm making for myself, just to get familiar with service workers.
