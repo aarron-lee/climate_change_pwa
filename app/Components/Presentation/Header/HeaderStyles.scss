@@ -1,0 +1,14 @@
+@import '~Stylesheets/core.scss';
+
+.header {
+  background: $header-bg-color;
+  color: $white;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  font-family: $default-font-family;
+  font-size: $font-size-large;
+  padding: $default-padding;
+  position: fixed;
+  width: 100%;
+}

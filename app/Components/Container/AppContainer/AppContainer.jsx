@@ -1,12 +1,13 @@
 import React from 'react';
 
-import styles from './AppContainerStyles';
+import Header from 'PresentationalComponents/Header/Header';
 
-const AppContainer = () => (
-  <div>
-    <div className={styles.appContainer}>App Container</div>
-    <h1>h1</h1>
-  </div>
-);
+const AppContainer = () => {
+  return (
+    <div>
+      <Header>Climate Change Guide</Header>
+    </div>
+  );
+};
 
 export default AppContainer;
