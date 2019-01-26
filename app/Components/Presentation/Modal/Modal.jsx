@@ -3,8 +3,10 @@ import { Portal } from 'react-portal';
 
 const ModalContext = React.createContext();
 
-const ToggleModalButton = ({ children, openOnClick = false, ...props }) => (
-  <ModalContext.Consumer>
+const { Provider, Consumer } = ModalContext;
+
+const ToggleButton = ({ children, openOnClick = false, ...props }) => (
+  <Consumer>
     {({ modalIsOpen, toggleModal }) => {
       if (children && typeof children === 'function') {
         return children({ modalIsOpen, toggleModal });
@@ -16,49 +18,47 @@ const ToggleModalButton = ({ children, openOnClick = false, ...props }) => (
         </button>
       );
     }}
-  </ModalContext.Consumer>
-);
-
-export const CloseModalButton = ({ children, ...props }) => (
-  <ToggleModalButton openOnClick={false} {...props}>
-    {children}
-  </ToggleModalButton>
-);
-
-export const OpenModalButton = ({ children, ...props }) => (
-  <ToggleModalButton {...props} openOnClick>
-    {children}
-  </ToggleModalButton>
-);
-
-export const ModalContent = ({ children }) => (
-  <ModalContext.Consumer>
-    {({ modalIsOpen }) => {
-      if (!modalIsOpen) {
-        return null;
-      }
-      return <Portal>{children}</Portal>;
-    }}
-  </ModalContext.Consumer>
+  </Consumer>
 );
 
 class Modal extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
-      modalIsOpen: false
+      modalIsOpen: props.initiallyOpen ? true : false
     };
   }
+
+  static Content = ({ children }) => (
+    <ModalContext.Consumer>
+      {({ modalIsOpen }) => {
+        if (!modalIsOpen) {
+          return null;
+        }
+        return <Portal>{children}</Portal>;
+      }}
+    </ModalContext.Consumer>
+  );
+
+  static CloseButton = ({ children, ...props }) => (
+    <ToggleButton openOnClick={false} {...props}>
+      {children}
+    </ToggleButton>
+  );
+
+  static OpenButton = ({ children, ...props }) => (
+    <ToggleButton openOnClick {...props}>
+      {children}
+    </ToggleButton>
+  );
 
   toggleModal = newModalState => this.setState({ modalIsOpen: newModalState });
 
   render() {
     return (
-      <ModalContext.Provider
-        value={{ modalIsOpen: this.state.modalIsOpen, toggleModal: this.toggleModal }}
-      >
+      <Provider value={{ modalIsOpen: this.state.modalIsOpen, toggleModal: this.toggleModal }}>
         {this.props.children}
-      </ModalContext.Provider>
+      </Provider>
     );
   }
 }

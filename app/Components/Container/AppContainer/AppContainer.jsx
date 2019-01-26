@@ -1,11 +1,7 @@
 import React, { Fragment } from 'react';
 
 import Header from 'PresentationalComponents/Header/Header';
-import Modal, {
-  ModalContent,
-  OpenModalButton,
-  CloseModalButton
-} from 'PresentationalComponents/Modal/Modal';
+import Modal from 'PresentationalComponents/Modal/Modal';
 
 const AppContainer = () => {
   return (
@@ -13,11 +9,11 @@ const AppContainer = () => {
       <Header>Climate Change Guide</Header>
       <div style={{ paddingTop: '60px' }}>
         <Modal>
-          <ModalContent>
+          <Modal.Content>
             modalContent
-            <CloseModalButton>Close modal</CloseModalButton>
-          </ModalContent>
-          <OpenModalButton>Open Modal</OpenModalButton>
+            <Modal.CloseButton>Close modal</Modal.CloseButton>
+          </Modal.Content>
+          <Modal.OpenButton>Open Modal</Modal.OpenButton>
         </Modal>
       </div>
     </Fragment>
