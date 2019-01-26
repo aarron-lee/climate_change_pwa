@@ -1,4 +1,5 @@
 const path = require('path');
+// injects scripts into index.html
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
