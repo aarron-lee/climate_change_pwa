@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 // cleans out specified directories on build
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 // injects scripts into index.html
@@ -51,6 +52,9 @@ module.exports = {
     extensions: ['.js', '.jsx', '.scss']
   },
   plugins: [
+    new webpack.ProvidePlugin({
+      localforage: 'localforage'
+    }),
     new CleanWebpackPlugin(['build']),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'app', 'index.template.html'),
