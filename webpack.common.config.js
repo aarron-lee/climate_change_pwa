@@ -18,6 +18,24 @@ module.exports = {
         use: {
           loader: 'babel-loader'
         }
+      },
+      {
+        test: /\.s?css$/,
+        use: [
+          {
+            loader: 'style-loader'
+          },
+          {
+            loader: 'css-loader',
+            options: {
+              modules: true,
+              localIdentName: '[path]___[name]__[local]___[hash:base64:5]'
+            }
+          },
+          {
+            loader: 'sass-loader'
+          }
+        ]
       }
     ]
   },
