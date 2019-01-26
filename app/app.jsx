@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import 'normalize.css';
+
 import AppContainer from 'ContainerComponents/AppContainer/AppContainer';
 
 document.addEventListener('DOMContentLoaded', function() {
