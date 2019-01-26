@@ -1,4 +1,6 @@
 const path = require('path');
+// cleans out specified directories on build
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 // injects scripts into index.html
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
@@ -7,7 +9,7 @@ module.exports = {
     app: path.resolve(__dirname, 'app', 'app.js')
   },
   output: {
-    path: path.resolve(__dirname),
+    path: path.resolve(__dirname, 'build'),
     filename: 'assets/[name].[contenthash].js'
   },
   module: {
@@ -40,6 +42,7 @@ module.exports = {
     ]
   },
   plugins: [
+    new CleanWebpackPlugin(['build']),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'app', 'index.template.html'),
       inject: 'body'

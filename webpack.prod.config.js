@@ -1,12 +1,19 @@
 const webpack = require('webpack');
 const merge = require('webpack-merge');
 const commonConfig = require('./webpack.common.config.js');
-// cleans out specified directories on build
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+const WorkboxPlugin = require('workbox-webpack-plugin');
 
 module.exports = merge(commonConfig, {
   mode: 'production',
-  plugins: [new CleanWebpackPlugin(['assets']), new webpack.HashedModuleIdsPlugin()],
+  plugins: [
+    new webpack.HashedModuleIdsPlugin(),
+    new WorkboxPlugin.GenerateSW({
+      // these options encourage to get in fast
+      // and not allow any straggling "old" SWs
+      clientsClaim: true,
+      skipWaiting: true
+    })
+  ],
   optimization: {
     runtimeChunk: 'single',
     splitChunks: {
