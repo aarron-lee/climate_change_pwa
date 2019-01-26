@@ -1,0 +1,53 @@
+@import '~Stylesheets/core.scss';
+
+.modalBackdrop {
+  background: $transparent-black;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  pointer-events: none;
+  will-change: opacity;
+  -webkit-transition: opacity 0.333s cubic-bezier(0, 0, 0.21, 1);
+  transition: opacity 0.333s cubic-bezier(0, 0, 0.21, 1);
+}
+
+.backdropVisible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modalContent {
+  background: $white;
+  border-radius: $card-border-radius;
+  box-shadow: $card-shadow;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%) translateY(30px);
+  transform: translate(-50%, -50%) translateY(30px);
+  -webkit-transition: -webkit-transform 0.333s cubic-bezier(0, 0, 0.21, 1) 0.05s;
+  transition: -webkit-transform 0.333s cubic-bezier(0, 0, 0.21, 1) 0.05s;
+  transition: transform 0.333s cubic-bezier(0, 0, 0.21, 1) 0.05s;
+  transition: transform 0.333s cubic-bezier(0, 0, 0.21, 1) 0.05s,
+    -webkit-transform 0.333s cubic-bezier(0, 0, 0.21, 1) 0.05s;
+  padding: $default-padding;
+  min-height: 200px;
+  width: 90%;
+  &.small {
+    max-height: 50%;
+    max-width: 400px;
+  }
+
+  &.medium {
+    max-height: 70%;
+    max-width: 700px;
+  }
+
+  &.large {
+    max-height: 80%;
+    max-width: 1000px;
+  }
+}

@@ -9,12 +9,17 @@ $font-size-largest: 36px;
 $fw-light: 300;
 
 // colors
-$white: #fff;
-$purple: #3f51b5;
-
 $blue: #248ec4;
+$purple: #3f51b5;
+$white: #fff;
+
+$transparent-black: rgba(0, 0, 0, 0.57);
 
 $header-bg-color: $blue;
 
 // padding
 $default-padding: 16px 16px;
+
+// card shadow
+$card-shadow: 0 0 14px rgba(0, 0, 0, 0.24), 0 14px 28px rgba(0, 0, 0, 0.48);
+$card-border-radius: 2px;

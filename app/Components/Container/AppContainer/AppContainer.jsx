@@ -1,14 +1,14 @@
 import React, { Fragment } from 'react';
 
 import Header from 'PresentationalComponents/Header/Header';
-import Modal from 'PresentationalComponents/Modal/Modal';
+import Modal, { MODAL_SIZES } from 'PresentationalComponents/Modal/Modal';
 
 const AppContainer = () => {
   return (
     <Fragment>
       <Header>Climate Change Guide</Header>
       <div style={{ paddingTop: '60px' }}>
-        <Modal>
+        <Modal size={MODAL_SIZES.SMALL}>
           <Modal.Content>
             modalContent
             <Modal.CloseButton>Close modal</Modal.CloseButton>

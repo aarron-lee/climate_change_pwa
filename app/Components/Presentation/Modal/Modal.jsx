@@ -1,6 +1,14 @@
 import React from 'react';
 import { Portal } from 'react-portal';
 
+import styles from './ModalStyles';
+
+export const MODAL_SIZES = {
+  SMALL: 'small',
+  MEDIUM: 'medium',
+  LARGE: 'large'
+};
+
 const ModalContext = React.createContext();
 
 const { Provider, Consumer } = ModalContext;
@@ -31,11 +39,27 @@ class Modal extends React.Component {
 
   static Content = ({ children }) => (
     <ModalContext.Consumer>
-      {({ modalIsOpen }) => {
-        if (!modalIsOpen) {
-          return null;
-        }
-        return <Portal>{children}</Portal>;
+      {({ modalIsOpen, toggleModal, contentSize }) => {
+        const closeModal = e => {
+          e.stopPropagation();
+          if (modalIsOpen) toggleModal(false);
+        };
+
+        return (
+          <Portal>
+            <div
+              className={`${styles.modalBackdrop} ${modalIsOpen ? styles.backdropVisible : ''}`}
+              onClick={closeModal}
+            >
+              <div
+                className={`${styles.modalContent} ${styles[contentSize]}`}
+                onClick={e => e.stopPropagation()}
+              >
+                {children}
+              </div>
+            </div>
+          </Portal>
+        );
       }}
     </ModalContext.Consumer>
   );
@@ -56,7 +80,13 @@ class Modal extends React.Component {
 
   render() {
     return (
-      <Provider value={{ modalIsOpen: this.state.modalIsOpen, toggleModal: this.toggleModal }}>
+      <Provider
+        value={{
+          modalIsOpen: this.state.modalIsOpen,
+          toggleModal: this.toggleModal,
+          contentSize: this.props.size || MODAL_SIZES.MEDIUM
+        }}
+      >
         {this.props.children}
       </Provider>
     );
