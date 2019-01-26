@@ -46,7 +46,7 @@ module.exports = {
       Components: path.resolve(__dirname, 'app', 'Components'),
       ContainerComponents: path.resolve(__dirname, 'app', 'Components', 'Container'),
       PresentationalComponents: path.resolve(__dirname, 'app', 'Components', 'Presentation'),
-      Stylesheets: path.resolve(__dirname, 'app', 'Styles')
+      Stylesheets: path.resolve(__dirname, 'app', 'Stylesheets')
     },
     extensions: ['.js', '.jsx', '.scss']
   },

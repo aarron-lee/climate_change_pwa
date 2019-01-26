@@ -7,7 +7,7 @@
       "PresentationalComponents/*": ["app/Components/Presentation/*"],
       "ContainerComponents/*": ["app/Components/Container/*"],
       "Components/*": ["app/Components/*"],
-      "Stylesheets/*": ["app/Styles/*"]
+      "Stylesheets/*": ["app/Stylesheets/*"]
     }
   }
 }
