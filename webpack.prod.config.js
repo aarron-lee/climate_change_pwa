@@ -5,5 +5,17 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = merge(commonConfig, {
   mode: 'production',
-  plugins: [new CleanWebpackPlugin(['assets'])]
+  plugins: [new CleanWebpackPlugin(['assets'])],
+  optimization: {
+    runtimeChunk: 'single',
+    splitChunks: {
+      cacheGroups: {
+        vendor: {
+          test: /[\\/]node_modules[\\/]/,
+          name: 'vendors',
+          chunks: 'all'
+        }
+      }
+    }
+  }
 });
