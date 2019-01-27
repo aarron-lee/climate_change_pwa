@@ -14,8 +14,8 @@ const GithubInfoModal = () => (
   <Modal size={MODAL_SIZES.SMALL}>
     <Modal.Content>
       <h3>Project created by Aarron Lee</h3>
+      <p>Github Profile: </p>
       <p>
-        Github Profile:{' '}
         <a href="https://github.com/aarron-lee">
           <Icon svg={GithubIcon} />
         </a>
