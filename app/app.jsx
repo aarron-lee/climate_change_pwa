@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { HashRouter } from 'react-router-dom';
 
 import 'normalize.css';
 
@@ -8,7 +9,12 @@ import AppContainer from 'ContainerComponents/AppContainer/AppContainer';
 document.addEventListener('DOMContentLoaded', function() {
   const root = document.getElementById('root');
   if (root) {
-    ReactDOM.render(<AppContainer />, root);
+    ReactDOM.render(
+      <HashRouter>
+        <AppContainer />
+      </HashRouter>,
+      root
+    );
   }
 });
 
