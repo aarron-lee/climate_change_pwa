@@ -7,6 +7,7 @@ import Main from 'PresentationalComponents/Main/Main';
 import Modal, { MODAL_SIZES } from 'PresentationalComponents/Modal/Modal';
 
 import withIsMobile from 'UtilComponents/withIsMobile';
+import Icon from 'PresentationalComponents/Icon/Icon';
 
 const GithubInfoModal = () => (
   <Modal size={MODAL_SIZES.SMALL}>
@@ -15,14 +16,14 @@ const GithubInfoModal = () => (
       <p>
         Github Profile:{' '}
         <a href="https://github.com/aarron-lee">
-          <GithubIcon height={25} width={25} />
+          <Icon svg={GithubIcon} />
         </a>
       </p>
       <Modal.CloseButton>Close modal</Modal.CloseButton>
     </Modal.Content>
     <Modal.OpenButton>
       {({ openModal }) => {
-        return <GithubIcon height={25} width={25} onClick={openModal} />;
+        return <Icon svg={GithubIcon} onClick={openModal} />;
       }}
     </Modal.OpenButton>
   </Modal>
