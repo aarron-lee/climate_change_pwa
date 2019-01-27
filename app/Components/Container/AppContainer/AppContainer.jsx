@@ -5,10 +5,14 @@ import Header from 'PresentationalComponents/Header/Header';
 import Main from 'PresentationalComponents/Main/Main';
 import Modal, { MODAL_SIZES } from 'PresentationalComponents/Modal/Modal';
 
-const AppContainer = () => {
+import withIsMobile from 'UtilComponents/withIsMobile';
+
+const AppContainer = ({ isMobile }) => {
   return (
     <Body>
-      <Header>Climate Change Guide</Header>
+      <Header>
+        <div>Climate Change Guide</div>
+      </Header>
       <Main>
         <Modal size={MODAL_SIZES.SMALL}>
           <Modal.Content>
@@ -22,4 +26,4 @@ const AppContainer = () => {
   );
 };
 
-export default AppContainer;
+export default withIsMobile(AppContainer);
