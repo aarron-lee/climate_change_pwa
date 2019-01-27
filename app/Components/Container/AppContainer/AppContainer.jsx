@@ -17,14 +17,14 @@ const GithubInfoModal = () => (
       <p>Github Profile: </p>
       <p>
         <a href="https://github.com/aarron-lee">
-          <Icon svg={GithubIcon} />
+          <Icon svg={GithubIcon} link />
         </a>
       </p>
       <Modal.CloseButton>Close modal</Modal.CloseButton>
     </Modal.Content>
     <Modal.OpenButton>
       {({ openModal }) => {
-        return <Icon svg={MoreInfoIcon} onClick={openModal} fill="white" />;
+        return <Icon svg={MoreInfoIcon} onClick={openModal} fill="white" link />;
       }}
     </Modal.OpenButton>
   </Modal>
