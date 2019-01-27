@@ -38,13 +38,16 @@ $screen-medium: 992px;
 $screen-small: 768px;
 $screen-tiny: 320px;
 
-@mixin mediaPadding($top-padding: $default-top-padding, $bottom-padding: $default-bottom-padding) {
-  padding: $top-padding 250px $bottom-padding 250px;
-  width: 100%;
-  @media (max-width: $screen-medium) {
-    padding: $top-padding 120px $bottom-padding 120px;
+@mixin mediaWidth {
+  max-width: 70%;
+  @media (max-width: $screen-xlarge) {
+    max-width: 70%;
   }
-  @media (max-width: $screen-small) {
-    padding: $top-padding $default-right-padding $bottom-padding $default-left-padding;
+  @media (max-width: $screen-large) {
+    max-width: 80%;
+  }
+  @media (max-width: $screen-medium) {
+    max-width: 100%;
+    margin: 0 16px;
   }
 }

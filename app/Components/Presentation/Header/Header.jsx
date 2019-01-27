@@ -3,7 +3,11 @@ import React, { memo } from 'react';
 import styles from './HeaderStyles';
 
 const Header = ({ children }) => {
-  return <header className={styles.header}>{children}</header>;
+  return (
+    <div className={styles.headerContainer}>
+      <header className={styles.header}>{children}</header>
+    </div>
+  );
 };
 
 export default memo(Header);

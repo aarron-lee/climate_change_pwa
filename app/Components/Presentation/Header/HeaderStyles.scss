@@ -1,13 +1,22 @@
 @import '~Stylesheets/core.scss';
 
 .header {
-  background: $header-bg-color;
   color: $white;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   flex-wrap: nowrap;
   font-family: $default-font-family;
   font-size: $font-size-large;
-  position: fixed;
-  @include mediaPadding;
+  width: 100%;
+  @include mediaWidth();
+}
+
+.headerContainer {
+  background: $header-bg-color;
+  height: 55px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }

@@ -1,5 +1,16 @@
 @import '~Stylesheets/core.scss';
 
 .main {
-  @include mediaPadding(60px);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  font-family: $default-font-family;
+  width: 100%;
+  @include mediaWidth();
+}
+
+.mainContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }

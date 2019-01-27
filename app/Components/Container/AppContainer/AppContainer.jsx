@@ -35,7 +35,7 @@ const AppContainer = ({ isMobile }) => {
         <div>Climate Change Guide</div>
         <GithubInfoModal />
       </Header>
-      <Main />
+      <Main>content</Main>
     </Body>
   );
 };
