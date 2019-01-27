@@ -2,6 +2,7 @@ import React from 'react';
 
 import Body from 'PresentationalComponents/Body/Body';
 import GithubIcon from 'Images/github_icon';
+import MoreInfoIcon from 'Images/more_info';
 import Header from 'PresentationalComponents/Header/Header';
 import Main from 'PresentationalComponents/Main/Main';
 import Modal, { MODAL_SIZES } from 'PresentationalComponents/Modal/Modal';
@@ -23,7 +24,7 @@ const GithubInfoModal = () => (
     </Modal.Content>
     <Modal.OpenButton>
       {({ openModal }) => {
-        return <Icon svg={GithubIcon} onClick={openModal} />;
+        return <Icon svg={MoreInfoIcon} onClick={openModal} fill="white" />;
       }}
     </Modal.OpenButton>
   </Modal>
