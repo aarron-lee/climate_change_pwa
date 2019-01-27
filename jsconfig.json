@@ -8,7 +8,8 @@
       "ContainerComponents/*": ["app/Components/Container/*"],
       "UtilComponents/*": ["app/Components/Util/*"],
       "Components/*": ["app/Components/*"],
-      "Stylesheets/*": ["app/Stylesheets/*"]
+      "Stylesheets/*": ["app/Stylesheets/*"],
+      "Images/*": ["app/Images/*"]
     }
   }
 }

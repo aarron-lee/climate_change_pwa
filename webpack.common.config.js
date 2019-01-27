@@ -63,9 +63,10 @@ module.exports = {
       ContainerComponents: path.resolve(__dirname, 'app', 'Components', 'Container'),
       PresentationalComponents: path.resolve(__dirname, 'app', 'Components', 'Presentation'),
       UtilComponents: path.resolve(__dirname, 'app', 'Components', 'Util'),
-      Stylesheets: path.resolve(__dirname, 'app', 'Stylesheets')
+      Stylesheets: path.resolve(__dirname, 'app', 'Stylesheets'),
+      Images: path.resolve(__dirname, 'app', 'Images')
     },
-    extensions: ['.js', '.jsx', '.scss']
+    extensions: ['.js', '.jsx', '.scss', '.svg']
   },
   plugins: [
     new webpack.ProvidePlugin({
