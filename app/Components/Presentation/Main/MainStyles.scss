@@ -1,5 +1,5 @@
 @import '~Stylesheets/core.scss';
 
 .main {
-  padding-top: 60px;
+  @include mediaPadding(60px);
 }

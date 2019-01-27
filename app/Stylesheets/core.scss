@@ -20,8 +20,31 @@ $transparent-black: rgba(0, 0, 0, 0.57);
 $header-bg-color: $blue;
 
 // padding
-$default-padding: 16px 16px;
+$default-top-padding: 16px;
+$default-right-padding: 16px;
+$default-bottom-padding: 16px;
+$default-left-padding: 16px;
+$default-padding: $default-bottom-padding $default-right-padding $default-bottom-padding
+  $default-left-padding;
 
 // card shadow
 $card-shadow: 0 0 14px rgba(0, 0, 0, 0.24), 0 14px 28px rgba(0, 0, 0, 0.48);
 $card-border-radius: 2px;
+
+// screen breakpoints
+$screen-xlarge: 1440px;
+$screen-large: 1200px;
+$screen-medium: 992px;
+$screen-small: 768px;
+$screen-tiny: 320px;
+
+@mixin mediaPadding($top-padding: $default-top-padding, $bottom-padding: $default-bottom-padding) {
+  padding: $top-padding 250px $bottom-padding 250px;
+  width: 100%;
+  @media (max-width: $screen-medium) {
+    padding: $top-padding 120px $bottom-padding 120px;
+  }
+  @media (max-width: $screen-small) {
+    padding: $top-padding $default-right-padding $bottom-padding $default-left-padding;
+  }
+}
