@@ -1,0 +1,9 @@
+@import '~Stylesheets/core.scss';
+
+.body {
+  background-color: $gray;
+  font-family: $default-font-family;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}

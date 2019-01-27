@@ -1,13 +1,15 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 
+import Body from 'PresentationalComponents/Body/Body';
 import Header from 'PresentationalComponents/Header/Header';
+import Main from 'PresentationalComponents/Main/Main';
 import Modal, { MODAL_SIZES } from 'PresentationalComponents/Modal/Modal';
 
 const AppContainer = () => {
   return (
-    <Fragment>
+    <Body>
       <Header>Climate Change Guide</Header>
-      <div style={{ paddingTop: '60px' }}>
+      <Main>
         <Modal size={MODAL_SIZES.SMALL}>
           <Modal.Content>
             modalContent
@@ -15,8 +17,8 @@ const AppContainer = () => {
           </Modal.Content>
           <Modal.OpenButton>Open Modal</Modal.OpenButton>
         </Modal>
-      </div>
-    </Fragment>
+      </Main>
+    </Body>
   );
 };
 
