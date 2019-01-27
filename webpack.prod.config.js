@@ -19,7 +19,9 @@ module.exports = merge(commonConfig, {
       // these options encourage to get in fast
       // and not allow any straggling "old" SWs
       clientsClaim: true,
-      skipWaiting: true
+      skipWaiting: true,
+      importWorkboxFrom: 'local',
+      navigateFallback: '/'
     })
   ],
   optimization: {
