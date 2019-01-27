@@ -6,6 +6,7 @@
     "paths": {
       "PresentationalComponents/*": ["app/Components/Presentation/*"],
       "ContainerComponents/*": ["app/Components/Container/*"],
+      "UtilComponents/*": ["app/Components/Util/*"],
       "Components/*": ["app/Components/*"],
       "Stylesheets/*": ["app/Stylesheets/*"]
     }
