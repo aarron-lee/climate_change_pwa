@@ -17,7 +17,12 @@ const ToggleButton = ({ children, openOnClick = false, ...props }) => (
   <Consumer>
     {({ modalIsOpen, toggleModal }) => {
       if (children && typeof children === 'function') {
-        return children({ modalIsOpen, toggleModal });
+        return children({
+          modalIsOpen,
+          toggleModal,
+          openModal: () => toggleModal(true),
+          closeModal: () => toggleModal(false)
+        });
       }
       let changeModalState = () => toggleModal(openOnClick);
       return (
@@ -71,7 +76,7 @@ class Modal extends React.Component {
   );
 
   static OpenButton = ({ children, ...props }) => (
-    <ToggleButton openOnClick {...props}>
+    <ToggleButton openOnClick={true} {...props}>
       {children}
     </ToggleButton>
   );
