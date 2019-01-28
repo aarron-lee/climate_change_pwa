@@ -5,6 +5,15 @@ const commonConfig = require('./webpack.common.config.js');
 const WorkboxPlugin = require('workbox-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
+// https://developers.google.com/web/tools/workbox/modules/workbox-strategies
+const CACHE_STRATEGIES = {
+  CACHE_FIRST: 'cacheFirst',
+  STALE_WHILE_REVALIDATE: 'staleWhileRevalidate',
+  NETWORK_FIRST: 'networkFirst',
+  NETWORK_ONLY: 'networkOnly',
+  CACHE_ONLY: 'cacheOnly'
+};
+
 module.exports = merge(commonConfig, {
   mode: 'production',
   plugins: [
@@ -21,7 +30,10 @@ module.exports = merge(commonConfig, {
       clientsClaim: true,
       skipWaiting: true,
       importWorkboxFrom: 'local',
-      navigateFallback: '/'
+      navigateFallback: '/',
+      runtimeCaching: [
+        { urlPattern: new RegExp('/static/*'), handler: CACHE_STRATEGIES.CACHE_FIRST }
+      ]
     })
   ],
   optimization: {
