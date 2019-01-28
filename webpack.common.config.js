@@ -60,7 +60,7 @@ module.exports = {
   resolve: {
     alias: {
       Components: path.resolve(__dirname, 'app', 'Components'),
-      ContainerComponents: path.resolve(__dirname, 'app', 'Components', 'Container'),
+      ViewComponents: path.resolve(__dirname, 'app', 'Components', 'Views'),
       PresentationalComponents: path.resolve(__dirname, 'app', 'Components', 'Presentation'),
       UtilComponents: path.resolve(__dirname, 'app', 'Components', 'Util'),
       Stylesheets: path.resolve(__dirname, 'app', 'Stylesheets'),

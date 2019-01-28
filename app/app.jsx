@@ -4,7 +4,7 @@ import { HashRouter } from 'react-router-dom';
 
 import 'normalize.css';
 
-import AppContainer from 'ContainerComponents/AppContainer/AppContainer';
+import AppContainer from 'ViewComponents/App/AppContainer';
 
 document.addEventListener('DOMContentLoaded', function() {
   const root = document.getElementById('root');
