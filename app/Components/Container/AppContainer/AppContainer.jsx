@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Body from 'PresentationalComponents/Body/Body';
+import Card from 'PresentationalComponents/Card/Card';
 import GithubIcon from 'Images/github_icon';
 import MoreInfoIcon from 'Images/more_info';
 import Header from 'PresentationalComponents/Header/Header';
@@ -37,7 +38,9 @@ const AppContainer = ({ isMobile }) => {
         <div>Climate Change Guide</div>
         <GithubInfoModal />
       </Header>
-      <Main>content</Main>
+      <Main>
+        <Card style={{ padding: '16px', marginTop: '25px' }}>card content</Card>
+      </Main>
     </Body>
   );
 };
