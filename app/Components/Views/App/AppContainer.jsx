@@ -39,7 +39,9 @@ const AppContainer = ({ isMobile }) => {
         <GithubInfoModal />
       </Header>
       <Main>
-        <Card style={{ padding: '16px', marginTop: '25px' }}>card content</Card>
+        <Card style={{ padding: '16px', marginTop: '25px' }}>
+          <img src="/static/food_chart.png" width={450} height={300} />
+        </Card>
       </Main>
     </Body>
   );

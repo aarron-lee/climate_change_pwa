@@ -22,6 +22,10 @@ module.exports = merge(commonConfig, {
       {
         from: path.resolve(__dirname, 'app', 'manifest.json'),
         to: path.resolve(__dirname, 'build', 'manifest.json')
+      },
+      {
+        from: path.resolve(__dirname, 'static'),
+        to: path.resolve(__dirname, 'build', 'static')
       }
     ]),
     new WorkboxPlugin.GenerateSW({
