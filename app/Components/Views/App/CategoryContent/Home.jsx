@@ -25,7 +25,7 @@ const Home = () => (
         style={{ maxWidth: '600px', alignSelf: 'center' }}
       />
       <figcaption>
-        Image Courtesy of Bloomberg{' '}
+        Image from Bloomberg{' '}
         <a href="https://www.geospatialworld.net/blogs/brazil-abandons-hosting-un-cop25/">source</a>
       </figcaption>
     </figure>
@@ -50,8 +50,8 @@ const Home = () => (
       <a href="https://jakearchibald.github.io/isserviceworkerready/">supported browser</a>, try
       turning off your wifi/internet and navigating to a different page on this site. You should
       still see stuff render (though some pictures might be missing, since some of them do need a
-      internet connection). Depending on your operating system (Android, etc), you can even add a
-      shortcut to your desktop!
+      internet connection for the initial load). Depending on your operating system (Android, etc),
+      you can even add a shortcut to your desktop!
     </p>
     <p>
       <h5>

@@ -1,12 +1,14 @@
 import React from 'react';
 import Home from './Home';
 import Food from './Food';
+import Energy from './Energy';
+import Transportation from './Transportation';
 
 export const CATEGORIES = {
   HOME: 'home',
   FOOD: 'food',
-  TRANSPORT: 'transport',
-  ENERGY: 'energy'
+  ENERGY: 'energy',
+  TRANSPORT: 'transport'
 };
 
 const getContent = category => {
@@ -15,6 +17,10 @@ const getContent = category => {
       return <Home />;
     case CATEGORIES.FOOD:
       return <Food />;
+    case CATEGORIES.ENERGY:
+      return <Energy />;
+    case CATEGORIES.TRANSPORT:
+      return <Transportation />;
     default:
       return 'Invalid category';
   }
