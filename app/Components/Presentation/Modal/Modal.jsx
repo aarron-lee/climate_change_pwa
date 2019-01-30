@@ -3,6 +3,9 @@ import { Portal } from 'react-portal';
 
 import Button from 'PresentationalComponents/Button/Button';
 
+import CancelMark from 'Images/cancel_mark';
+import Icon from 'PresentationalComponents/Icon/Icon';
+
 import styles from './ModalStyles';
 
 export const MODAL_SIZES = {
@@ -62,6 +65,7 @@ class Modal extends React.Component {
                 className={`${styles.modalContent} ${styles[contentSize]}`}
                 onClick={e => e.stopPropagation()}
               >
+                <Icon svg={CancelMark} className={styles.cancelButton} onClick={closeModal} />
                 {children}
               </div>
             </div>

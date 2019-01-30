@@ -24,6 +24,7 @@
   border-radius: $card-border-radius;
   box-shadow: $card-large-shadow;
   font-family: $default-font-family;
+  overflow-y: auto;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -50,5 +51,13 @@
   &.large {
     max-height: 80%;
     max-width: 1000px;
+  }
+}
+
+.cancelButton {
+  float: right;
+  &:hover {
+    cursor: pointer;
+    opacity: 0.3;
   }
 }
