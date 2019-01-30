@@ -18,7 +18,8 @@ const Energy = () => (
           <li>During warm weather: Install thermal curtains to help keep your house cooler</li>
         </ul>
       </li>
-      <li>Buy solar panels</li>
+      <li>Contact your energy provider, and see if they offer any renewable energy sources</li>
+      <li>Buy solar panels for your home</li>
       <li>Support local clean energy efforts, including Solar, Wind, Hydro, Nuclear, etc</li>
     </ul>
     <figure style={{ border: '1px solid gray' }}>

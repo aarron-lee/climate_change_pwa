@@ -17,6 +17,10 @@ const Home = () => (
       </a>
       , I pretty much am just adding some more details + pictures + charts.
     </p>
+    <p>
+      What is a Progressive Web App? It’s an application hosted on a web browser. What makes it cool
+      is that you can download it, so <strong>it can work offline.</strong>
+    </p>
     <figure>
       <img
         src="/static/home.jpg"
@@ -29,10 +33,6 @@ const Home = () => (
         <a href="https://www.geospatialworld.net/blogs/brazil-abandons-hosting-un-cop25/">source</a>
       </figcaption>
     </figure>
-    <p>
-      What is a Progressive Web App? It’s an application hosted on a web browser. What makes it cool
-      is that you can download it, so <strong>it can work offline.</strong>
-    </p>
     <p>
       This project was originally done just as a small side project to learn more about PWAs. If you
       want to learn more about PWAs, you should go check out Google's documentation{' '}

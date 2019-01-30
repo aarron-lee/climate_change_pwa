@@ -2,13 +2,15 @@ import React from 'react';
 import Home from './Home';
 import Food from './Food';
 import Energy from './Energy';
+import Waste from './Waste';
 import Transportation from './Transportation';
 
 export const CATEGORIES = {
   HOME: 'home',
   FOOD: 'food',
   ENERGY: 'energy',
-  TRANSPORT: 'transport'
+  TRANSPORT: 'transport',
+  WASTE: 'waste'
 };
 
 const getContent = category => {
@@ -21,6 +23,8 @@ const getContent = category => {
       return <Energy />;
     case CATEGORIES.TRANSPORT:
       return <Transportation />;
+    case CATEGORIES.WASTE:
+      return <Waste />;
     default:
       return 'Invalid category';
   }
