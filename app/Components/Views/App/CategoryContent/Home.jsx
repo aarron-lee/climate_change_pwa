@@ -23,7 +23,7 @@ const Home = () => (
     </p>
     <figure>
       <img
-        src="/static/home.jpg"
+        src="static/home.jpg"
         width="100%"
         height="auto"
         style={{ maxWidth: '600px', alignSelf: 'center' }}

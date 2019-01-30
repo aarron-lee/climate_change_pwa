@@ -37,13 +37,8 @@ const Food = () => (
       </li>
     </ul>
     <figure style={{ border: '1px solid gray' }}>
-      <a href="/static/food_chart.png">
-        <img
-          src="/static/food_chart.png"
-          width="100%"
-          height="auto"
-          style={{ maxWidth: '600px' }}
-        />
+      <a href="static/food_chart.png">
+        <img src="static/food_chart.png" width="100%" height="auto" style={{ maxWidth: '600px' }} />
       </a>
       <figcaption>
         From BBC{' '}

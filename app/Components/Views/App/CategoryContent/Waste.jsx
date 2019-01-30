@@ -31,13 +31,8 @@ const Waste = () => (
       <li>Don't water your lawns, try planting plants that do well in your local environment</li>
     </ul>
     <figure style={{ border: '1px solid gray' }}>
-      <a href="/static/food_waste.jpg">
-        <img
-          src="/static/food_waste.jpg"
-          width="100%"
-          height="auto"
-          style={{ maxWidth: '600px' }}
-        />
+      <a href="static/food_waste.jpg">
+        <img src="static/food_waste.jpg" width="100%" height="auto" style={{ maxWidth: '600px' }} />
       </a>
       <figcaption>
         From Cook for Good{' '}

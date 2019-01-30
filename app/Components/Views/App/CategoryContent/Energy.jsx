@@ -23,9 +23,9 @@ const Energy = () => (
       <li>Support local clean energy efforts, including Solar, Wind, Hydro, Nuclear, etc</li>
     </ul>
     <figure style={{ border: '1px solid gray' }}>
-      <a href="/static/gases_chart.png">
+      <a href="static/gases_chart.png">
         <img
-          src="/static/gases_chart.png"
+          src="static/gases_chart.png"
           width="100%"
           height="auto"
           style={{ maxWidth: '600px' }}

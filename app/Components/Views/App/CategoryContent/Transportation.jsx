@@ -20,8 +20,8 @@ const Transportation = () => (
       <li>Support local public transportation initiatives</li>
     </ul>
     <figure style={{ border: '1px solid gray' }}>
-      <a href="/static/transport.jpg">
-        <img src="/static/transport.jpg" width="100%" height="auto" style={{ maxWidth: '600px' }} />
+      <a href="static/transport.jpg">
+        <img src="static/transport.jpg" width="100%" height="auto" style={{ maxWidth: '600px' }} />
       </a>
       <figcaption>
         From Sightline Institute{' '}
