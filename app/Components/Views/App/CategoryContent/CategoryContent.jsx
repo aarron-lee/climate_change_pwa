@@ -1,13 +1,6 @@
-import React, { Fragment } from 'react';
-
-{
-  /* <img
-  src="/static/food_chart.png"
-  width="100%"
-  height="auto"
-  style={{ maxWidth: '600px' }}
-/> */
-}
+import React from 'react';
+import Home from './Home';
+import Food from './Food';
 
 export const CATEGORIES = {
   HOME: 'home',
@@ -16,17 +9,19 @@ export const CATEGORIES = {
   ENERGY: 'energy'
 };
 
-const CategoryContent = ({ category }) => {
-  let content = '';
-
+const getContent = category => {
   switch (category) {
     case CATEGORIES.HOME:
-      content = 'Welcome to the home page';
-      break;
+      return <Home />;
+    case CATEGORIES.FOOD:
+      return <Food />;
     default:
-      content = 'Invalid category';
-      break;
+      return 'Invalid category';
   }
+};
+
+const CategoryContent = ({ category }) => {
+  let content = getContent(category);
 
   return <div>{content}</div>;
 };
