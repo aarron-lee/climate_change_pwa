@@ -2,6 +2,8 @@
 
 A basic Progressive Web App learning project I'm making for myself, just to get familiar with service workers.
 
+Live link: https://www.aarronlee.com/cc_guide/#/
+
 ![cc pwa](docs/cc_pwa.png)
 
 ### Mobile first and Offline first
