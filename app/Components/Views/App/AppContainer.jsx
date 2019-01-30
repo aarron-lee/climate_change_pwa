@@ -12,16 +12,6 @@ import Row from 'PresentationalComponents/Row/Row';
 
 import withIsMobile from 'UtilComponents/withIsMobile';
 
-{
-  /* <Column style={isMobile ? { marginTop: '25px', width: '100%' } : { marginTop: '25px' }}>
-
-</Column>
-{!isMobile && (
-  <Column>
-
-  </Column>
-)} */
-}
 const AppContainer = ({ isMobile }) => {
   let content = null;
   if (isMobile) {
@@ -29,7 +19,7 @@ const AppContainer = ({ isMobile }) => {
       <Column style={{ marginTop: '25px', width: '100%' }}>
         <Switch>
           <Route exact path="/" component={NavigationButtons} />
-          <Route path="/:category" component={AppContent} />
+          <Route path="/:category" render={() => <AppContent isMobile={isMobile} />} />
         </Switch>
       </Column>
     );
@@ -42,7 +32,7 @@ const AppContainer = ({ isMobile }) => {
           </Column>
           <Switch>
             <Route exact path="/" render={() => <AppContent category={'home'} />} />
-            <Route path="/:category" render={() => <AppContent isMobile={isMobile} />} />
+            <Route path="/:category" component={AppContent} />
           </Switch>
         </Row>
       </Fragment>
