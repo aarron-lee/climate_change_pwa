@@ -42,7 +42,10 @@ const AppContainer = ({ isMobile, ...otherProps }) => {
           <Column style={{ marginTop: '25px' }}>
             <NavigationButtons />
           </Column>
-          <Route path="/:category" component={AppContent} />
+          <Switch>
+            <Route exact path="/" render={() => <AppContent landing />} />
+            <Route path="/:category" render={() => <AppContent isMobile={isMobile} />} />
+          </Switch>
         </Row>
       </Fragment>
     );

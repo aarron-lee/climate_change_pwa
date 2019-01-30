@@ -19,6 +19,9 @@ const IndexItem = ({ children, url, isMobile }) => {
 
 const NavigationButtons = ({ isMobile }) => (
   <Fragment>
+    <IndexItem url="/" isMobile={isMobile}>
+      Home
+    </IndexItem>
     <IndexItem url="/food" isMobile={isMobile}>
       Food
     </IndexItem>
