@@ -20,7 +20,7 @@ const AppContent = ({ isMobile, ...props }) => {
           &#60; Back
         </Link>
       )}
-      <Card style={{ padding: '0px 16px', marginTop: '25px', width: '100%' }}>
+      <Card style={{ padding: '0px 16px', marginTop: '25px', width: '100%', maxWidth: '768px' }}>
         <h1>{inflection.titleize(category)}</h1>
         <img
           src="/static/food_chart.png"

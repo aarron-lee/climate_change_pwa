@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { Link, Route, Switch } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 
 import AppContent from 'ViewComponents/App/AppContent';
 import Body from 'PresentationalComponents/Body/Body';
