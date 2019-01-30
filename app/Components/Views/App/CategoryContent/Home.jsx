@@ -11,20 +11,12 @@ const Home = () => (
       individual decisions you can make to help prevent climate change.
     </p>
     <p>
-      What is a Progressive Web App? It’s an application hosted on a web browser. What makes it cool
-      is that it can work offline.
-    </p>
-    <p>
-      This project was originally done just as a small side project to learn more about PWAs. If you
-      want to learn more about PWAs, you should go check out Google's documentation{' '}
-      <a href="https://developers.google.com/web/progressive-web-apps/">here</a>
-    </p>
-    <div>
-      Source code:
-      <a href="https://github.com/aarron-lee/climate_change_pwa/">
-        <Icon svg={GithubIcon} link />
+      My main source of inspiration for this guide is{' '}
+      <a href="https://www.reddit.com/r/Futurology/comments/6rbzoz/heres_how_we_can_lower_our_personal_greenhouse/">
+        this reddit thread
       </a>
-    </div>
+      , I pretty much am just adding some more details + pictures + charts.
+    </p>
     <figure>
       <img
         src="/static/home.jpg"
@@ -37,6 +29,21 @@ const Home = () => (
         <a href="https://www.geospatialworld.net/blogs/brazil-abandons-hosting-un-cop25/">source</a>
       </figcaption>
     </figure>
+    <p>
+      What is a Progressive Web App? It’s an application hosted on a web browser. What makes it cool
+      is that you can download it, so <strong>it can work offline.</strong>
+    </p>
+    <p>
+      This project was originally done just as a small side project to learn more about PWAs. If you
+      want to learn more about PWAs, you should go check out Google's documentation{' '}
+      <a href="https://developers.google.com/web/progressive-web-apps/">here</a>
+    </p>
+    <div>
+      Source code:
+      <a href="https://github.com/aarron-lee/climate_change_pwa/">
+        <Icon svg={GithubIcon} link />
+      </a>
+    </div>
     <p>If you're curious about if this actually works offline, give it a shot!</p>
     <p>
       If you're using a{' '}
