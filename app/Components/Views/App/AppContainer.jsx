@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Body from 'PresentationalComponents/Body/Body';
+import Button, { BUTTON_SIZES } from 'PresentationalComponents/Button/Button';
 import Card from 'PresentationalComponents/Card/Card';
 import GithubIcon from 'Images/github_icon';
 import MoreInfoIcon from 'Images/more_info';

@@ -1,6 +1,8 @@
 import React from 'react';
 import { Portal } from 'react-portal';
 
+import Button from 'PresentationalComponents/Button/Button';
+
 import styles from './ModalStyles';
 
 export const MODAL_SIZES = {
@@ -26,9 +28,9 @@ const ToggleButton = ({ children, openOnClick = false, ...props }) => (
       }
       let changeModalState = () => toggleModal(openOnClick);
       return (
-        <button {...props} onClick={changeModalState}>
+        <Button {...props} onClick={changeModalState}>
           {children}
-        </button>
+        </Button>
       );
     }}
   </Consumer>

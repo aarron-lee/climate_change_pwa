@@ -1,0 +1,33 @@
+@import '~Stylesheets/core.scss';
+
+.button {
+  align-items: center;
+  background-color: $blue;
+  border-radius: 5px;
+  color: $white;
+  font-family: $default-font-family;
+  &:hover {
+    cursor: pointer;
+    opacity: 0.8;
+  }
+}
+
+.small {
+  padding: 8px 16px;
+  font-size: $font-size-small;
+}
+
+.medium {
+  font-size: $font-size-medium;
+  padding: 8px 16px;
+}
+
+.large {
+  font-size: $font-size-large;
+  padding: 12px 24px;
+}
+
+.xlarge {
+  font-size: $font-size-largest;
+  padding: 16px 32px;
+}
