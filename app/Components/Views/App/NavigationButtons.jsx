@@ -1,6 +1,8 @@
 import React, { Fragment } from 'react';
+import inflection from 'inflection';
 import { Link } from 'react-router-dom';
 
+import { CATEGORIES } from './CategoryContent/CategoryContent';
 import IndexItemCard from 'PresentationalComponents/IndexItemCard/IndexItemCard';
 
 import withIsMobile from 'UtilComponents/withIsMobile';
@@ -19,18 +21,13 @@ const IndexItem = ({ children, url, isMobile }) => {
 
 const NavigationButtons = ({ isMobile }) => (
   <Fragment>
-    <IndexItem url="/home" isMobile={isMobile}>
-      Home
-    </IndexItem>
-    <IndexItem url="/food" isMobile={isMobile}>
-      Food
-    </IndexItem>
-    <IndexItem url="/transport" isMobile={isMobile}>
-      Transport
-    </IndexItem>
-    <IndexItem url="/energy" isMobile={isMobile}>
-      Energy
-    </IndexItem>
+    {Object.values(CATEGORIES).map((category, idx) => {
+      return (
+        <IndexItem url={`/${category}`} key={idx} isMobile={isMobile}>
+          {inflection.titleize(category)}
+        </IndexItem>
+      );
+    })}
   </Fragment>
 );
 

@@ -9,7 +9,7 @@ import React, { Fragment } from 'react';
 /> */
 }
 
-const CATEGORIES = {
+export const CATEGORIES = {
   HOME: 'home',
   FOOD: 'food',
   TRANSPORT: 'transport',
