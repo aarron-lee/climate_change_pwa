@@ -2,7 +2,11 @@
   "name": "climate-change-guide",
   "description": "A offline-enabled PWA with guide on how to fight climate change as an individual",
   "version": "1.0.0",
-  "license": "UNLICENSED",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aarron-lee/climate_change_pwa"
+  },
   "engines": {
     "node": "10.15.0",
     "npm": "6.4.1"
