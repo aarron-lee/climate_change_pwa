@@ -10,11 +10,10 @@ const InfoModal = () => (
     <Modal.Content>
       <h3>DISCLAIMER ON ACCURACY:</h3>
       <p>
-        Although every effort has been made to provide accurate information in this app, I (the
-        developer of this app) provide no guarantees as to the accuracy of content on this
-        website/app. This is just information that I (the developer) compiled via Google searches,
-        etc. Every attempt was made to provide a source for information listed here, but
-        inaccuracies may exist.
+        Although effort has been made to provide accurate information in this app, I (the developer
+        of this app) provide no guarantees as to the accuracy of content on this website/app. This
+        is just information that I compiled via Google searches, etc. Some attempt was made to
+        provide legitimate sources for information listed here, but inaccuracies may exist.
       </p>
       <h3>What is this guide for?</h3>
       <p>

@@ -1,5 +1,61 @@
 import React from 'react';
 
-const Home = () => <div>Home page</div>;
+import GithubIcon from 'Images/github_icon';
+import Icon from 'PresentationalComponents/Icon/Icon';
+
+const Home = () => (
+  <div style={{ display: 'flex', flexDirection: 'column' }}>
+    <p>Welcome to the Climate Change Guide!</p>
+    <p>
+      This is a <strong>progressive web app (PWA)</strong> with some basic information on what
+      individual decisions you can make to help prevent climate change.
+    </p>
+    <p>
+      What is a Progressive Web App? It’s an application hosted on a web browser. What makes it cool
+      is that it can work offline.
+    </p>
+    <p>
+      This project was originally done just as a small side project to learn more about PWAs. If you
+      want to learn more about PWAs, you should go check out Google's documentation{' '}
+      <a href="https://developers.google.com/web/progressive-web-apps/">here</a>
+    </p>
+    <div>
+      Source code:
+      <a href="https://github.com/aarron-lee/climate_change_pwa/">
+        <Icon svg={GithubIcon} link />
+      </a>
+    </div>
+    <figure>
+      <img
+        src="/static/home.jpg"
+        width="100%"
+        height="auto"
+        style={{ maxWidth: '600px', alignSelf: 'center' }}
+      />
+      <figcaption>
+        Image Courtesy of Bloomberg{' '}
+        <a href="https://www.geospatialworld.net/blogs/brazil-abandons-hosting-un-cop25/">source</a>
+      </figcaption>
+    </figure>
+    <p>If you're curious about if this actually works offline, give it a shot!</p>
+    <p>
+      If you're using a{' '}
+      <a href="https://jakearchibald.github.io/isserviceworkerready/">supported browser</a>, try
+      turning off your wifi/internet and navigating to a different page on this site. You should
+      still see stuff render (though some pictures might be missing, since some of them do need a
+      internet connection). Depending on your operating system (Android, etc), you can even add a
+      shortcut to your desktop!
+    </p>
+    <p>
+      <h5>
+        Disclaimer: Although effort has been made to provide accurate information in this app, I
+        (the developer of this app) provide no guarantees as to the accuracy of content on this
+        website/app. This is just information that I compiled via Google searches, etc. Some attempt
+        was made to provide legitimate sources for information listed here, but inaccuracies may
+        exist.
+      </h5>
+    </p>
+  </div>
+);
 
 export default Home;
