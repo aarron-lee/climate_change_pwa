@@ -1,21 +1,53 @@
-import React from 'react';
+import React, { Fragment } from 'react';
+import { Link, Route, Switch } from 'react-router-dom';
 
+import AppContent from 'ViewComponents/App/AppContent';
 import Body from 'PresentationalComponents/Body/Body';
-import Card from 'PresentationalComponents/Card/Card';
 import Column from 'PresentationalComponents/Column/Column';
 import Header from 'PresentationalComponents/Header/Header';
 import InfoModal from 'ViewComponents/App/InfoModal';
-import IndexItemCard from 'PresentationalComponents/IndexItemCard/IndexItemCard';
 import Main from 'PresentationalComponents/Main/Main';
+import NavigationButtons from 'ViewComponents/App/NavigationButtons';
 import Row from 'PresentationalComponents/Row/Row';
 
 import withIsMobile from 'UtilComponents/withIsMobile';
 
-const AppContainer = ({ isMobile }) => {
-  let indexItemStyle = {};
+{
+  /* <Column style={isMobile ? { marginTop: '25px', width: '100%' } : { marginTop: '25px' }}>
+
+</Column>
+{!isMobile && (
+  <Column>
+
+  </Column>
+)} */
+}
+const AppContainer = ({ isMobile, ...otherProps }) => {
+  console.log(otherProps);
+
+  let content = null;
   if (isMobile) {
-    indexItemStyle.width = '100%';
+    content = (
+      <Column style={{ marginTop: '25px', width: '100%' }}>
+        <Switch>
+          <Route exact path="/" component={NavigationButtons} />
+          <Route path="/:category" component={AppContent} />
+        </Switch>
+      </Column>
+    );
+  } else {
+    content = (
+      <Fragment>
+        <Row>
+          <Column style={{ marginTop: '25px' }}>
+            <NavigationButtons />
+          </Column>
+          <Route path="/:category" component={AppContent} />
+        </Row>
+      </Fragment>
+    );
   }
+
   return (
     <Body>
       <Header>
@@ -23,20 +55,8 @@ const AppContainer = ({ isMobile }) => {
         <InfoModal />
       </Header>
       <Main>
-        <Row style={{ justifyContent: 'center', width: '100%' }}>
-          <Column style={isMobile ? { width: '100%' } : {}}>
-            <IndexItemCard style={{ marginTop: '25px', ...indexItemStyle }}>Food</IndexItemCard>
-            <IndexItemCard style={indexItemStyle}>Transport</IndexItemCard>
-            <IndexItemCard style={indexItemStyle}>Energy</IndexItemCard>
-          </Column>
-          {!isMobile && (
-            <Column>
-              <Card style={{ padding: '16px', marginTop: '25px', width: '800px' }}>
-                <h2>Food</h2>
-                <img src="/static/food_chart.png" width={450} height={300} />
-              </Card>
-            </Column>
-          )}
+        <Row style={{ justifyContent: 'center', width: '100%', marginBottom: '25px' }}>
+          {content}
         </Row>
       </Main>
     </Body>
