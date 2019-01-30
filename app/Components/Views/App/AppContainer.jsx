@@ -22,9 +22,7 @@ import withIsMobile from 'UtilComponents/withIsMobile';
   </Column>
 )} */
 }
-const AppContainer = ({ isMobile, ...otherProps }) => {
-  console.log(otherProps);
-
+const AppContainer = ({ isMobile }) => {
   let content = null;
   if (isMobile) {
     content = (
@@ -43,7 +41,7 @@ const AppContainer = ({ isMobile, ...otherProps }) => {
             <NavigationButtons />
           </Column>
           <Switch>
-            <Route exact path="/" render={() => <AppContent landing />} />
+            <Route exact path="/" render={() => <AppContent category={'home'} />} />
             <Route path="/:category" render={() => <AppContent isMobile={isMobile} />} />
           </Switch>
         </Row>
