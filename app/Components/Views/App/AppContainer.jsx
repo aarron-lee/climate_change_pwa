@@ -26,7 +26,7 @@ const AppContainer = ({ isMobile }) => {
   } else {
     content = (
       <Fragment>
-        <Row>
+        <Row style={{ width: '100%' }}>
           <Column style={{ marginTop: '25px' }}>
             <NavigationButtons />
           </Column>

@@ -3,6 +3,7 @@ import inflection from 'inflection';
 import { Link, withRouter } from 'react-router-dom';
 
 import Card from 'PresentationalComponents/Card/Card';
+import CategoryContent from './CategoryContent/CategoryContent';
 
 const linkStyle = { textDecoration: 'none', color: 'blue' };
 
@@ -20,14 +21,9 @@ const AppContent = ({ isMobile, ...props }) => {
           &#60; Back
         </Link>
       )}
-      <Card style={{ padding: '0px 16px', marginTop: '25px', width: '100%', maxWidth: '768px' }}>
+      <Card style={{ padding: '0px 16px', marginTop: '25px', width: '100%' }}>
         <h1>{inflection.titleize(category)}</h1>
-        <img
-          src="/static/food_chart.png"
-          width="100%"
-          height="auto"
-          style={{ maxWidth: '600px' }}
-        />
+        <CategoryContent category={category} />
       </Card>
     </Fragment>
   );
