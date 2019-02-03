@@ -40,17 +40,19 @@ const AppContainer = ({ isMobile }) => {
   }
 
   return (
-    <Body>
+    <Fragment>
       <Header>
         <div>Climate Change Guide</div>
         <InfoModal />
       </Header>
-      <Main>
-        <Row style={{ justifyContent: 'center', width: '100%', marginBottom: '25px' }}>
-          {content}
-        </Row>
-      </Main>
-    </Body>
+      <Body>
+        <Main>
+          <Row style={{ justifyContent: 'center', width: '100%', marginBottom: '25px' }}>
+            {content}
+          </Row>
+        </Main>
+      </Body>
+    </Fragment>
   );
 };
 
